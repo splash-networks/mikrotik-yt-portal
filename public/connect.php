@@ -9,8 +9,6 @@ $link_login = $_SESSION["link-login"];
 $link_login_only = $_SESSION["link-login-only"];
 $linkorig = "https://www.google.com";
 
-$last_updated = date("Y-m-d H:i:s");
-
 $username="admin";
 
 $fname = $_POST['fname'];
@@ -30,7 +28,7 @@ if ($_SESSION["user_type"] == "new") {
     PRIMARY KEY (`id`)
     )");
 
-    mysqli_query($con,"INSERT INTO `$table_name` (firstname, lastname, email, mac, ip, last_updated) VALUES ('$fname', '$lname', '$email', '$mac', '$ip', '$last_updated')");
+    mysqli_query($con,"INSERT INTO `$table_name` (firstname, lastname, email, mac, ip, last_updated) VALUES ('$fname', '$lname', '$email', '$mac', '$ip', NOW())");
 }
 
 mysqli_close($con);
