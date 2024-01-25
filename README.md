@@ -39,3 +39,5 @@ It has been successfully tested with `RouterOS v7.4.1`
 ## Mikrotik Hotspot Login file
 
 Add your domain to `login.html` in action field and upload it to Mikrotik router in Files => Hotspot folder.
+
+To get rid of the "You are logged in" message during hotspot login, the file `alogin.html` may be replaced on the Mikrotik. The status page will not be shown after that.
