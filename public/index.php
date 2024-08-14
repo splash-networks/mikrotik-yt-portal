@@ -1,32 +1,32 @@
 <?php
-//
-//require 'header.php';
-//include 'config.php';
-//
-//$_SESSION["mac"] = $_POST['mac'];
-//$_SESSION["ip"] = $_POST['ip'];
-//$_SESSION["link-login"] = $_POST['link-login'];
-//$_SESSION["link-login-only"] = $_POST['link-login-only'];
-//
-//$_SESSION["user_type"] = "new";
-//
-//# Checking DB to see if user exists or not.
-//
-//mysqli_report(MYSQLI_REPORT_OFF);
-//$result = mysqli_query($con, "SELECT * FROM `$table_name` WHERE mac='$_SESSION[mac]'");
-//
-//if ($result->num_rows >= 1) {
-//  $row = mysqli_fetch_array($result);
-//
-//  mysqli_close($con);
-//
-//  $_SESSION["user_type"] = "repeat";
-//  header("Location: welcome.php");
-//} else {
-//  mysqli_close($con);
-//}
-//
-//?>
+
+require 'header.php';
+include 'config.php';
+
+$_SESSION["mac"] = $_POST['mac'];
+$_SESSION["ip"] = $_POST['ip'];
+$_SESSION["link-login"] = $_POST['link-login'];
+$_SESSION["link-login-only"] = $_POST['link-login-only'];
+
+$_SESSION["user_type"] = "new";
+
+# Checking DB to see if user exists or not.
+
+mysqli_report(MYSQLI_REPORT_OFF);
+$result = mysqli_query($con, "SELECT * FROM `$table_name` WHERE mac='$_SESSION[mac]'");
+
+if ($result->num_rows >= 1) {
+  $row = mysqli_fetch_array($result);
+
+  mysqli_close($con);
+
+  $_SESSION["user_type"] = "repeat";
+  header("Location: welcome.php");
+} else {
+  mysqli_close($con);
+}
+
+?>
 <!doctype html>
 <html>
 
@@ -96,45 +96,6 @@
                         <button class="button is-link">Connect</button>
                     </div>
                 </form>
-
-                <br>
-                <div id="contact_form" class="content is-size-5 has-text-centered has-text-weight-bold">Or
-                <br>
-                <br>
-
-                <!-- Social Media Login Icons -->
-                <div class="buttons is-centered">
-                    <button class="button is-light">
-                        <span class="icon">
-                            <i class="fab fa-google"></i>
-                        </span>
-                    </button>
-                    <button class="button is-light">
-                        <span class="icon">
-                            <i class="fab fa-facebook"></i>
-                        </span>
-                    </button>
-                    <button class="button is-light">
-                        <span class="icon">
-                            <i class="fab fa-instagram"></i>
-                        </span>
-                    </button>
-                    <button class="button is-light">
-                        <span class="icon">
-                            <i class="fab fa-apple"></i>
-                        </span>
-                    </button>
-                    <button class="button is-light">
-                        <span class="icon">
-                            <i class="fab fa-linkedin"></i>
-                        </span>
-                    </button>
-                    <button class="button is-light">
-                        <span class="icon">
-                            <i class="fab fa-twitter"></i>
-                        </span>
-                    </button>
-                </div>
             </div>
         </section>
     </div>
