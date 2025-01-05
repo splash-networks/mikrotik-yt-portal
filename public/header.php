@@ -2,9 +2,9 @@
 
 session_start();
 
-if (!(isset($_SESSION['mac']) or isset($_POST['mac']))) {
-    exit('This page cannot be accessed directly. It only works when using a hotspot.');
-}
+//if (!(isset($_SESSION['mac']) or isset($_POST['mac']))) {
+//    exit('This page cannot be accessed directly. It only works when using a hotspot.');
+//}
 
 require 'vendor/autoload.php';
 
