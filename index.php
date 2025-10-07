@@ -1,3 +1,24 @@
+<?php
+
+require 'header.php';
+//
+$_SESSION["mac"] = $_POST['mac'] ?? $_SESSION['mac'] ?? null;
+$_SESSION["ip"] = $_POST['ip'] ?? $_SESSION['ip'] ?? null;
+$_SESSION["link-login"] = $_POST['link-login'] ?? $_SESSION['link-login'] ?? null;
+$_SESSION["link-login-only"] = $_POST['link-login-only'] ?? $_SESSION['link-login-only'] ?? null;
+//
+//
+if (isset($_REQUEST['redirURL'])) {
+    $_SESSION['redirURL'] = $_REQUEST['redirURL'];
+} elseif (isset($_POST['link-orig'])) {
+    $_SESSION['redirURL'] = $_POST['link-orig'];
+}
+//
+header("Location: connect.php");
+exit();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
