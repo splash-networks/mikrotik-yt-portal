@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main-container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, var(--Blue-Sky, rgba(0, 194, 211, 0.50)) 100%), #FFF;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none; 
+}
+
+.container-logo > *:not(.video-background) {
+    position: relative;
+    z-index: 1;
+}
+
+.container-logo{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 134px;
+    align-self: stretch;
+}
+
+.container-logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Montserrat Regular";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    height: 112px;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.checkbox-container{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+a{
+    color: var(--Link, color(display-p3 0.0272 0.4454 1));
+    font-family: "Montserrat Regular";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+label{
+    color: #7C8A97;
+    font-family: "Montserrat Regular";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.phone-input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.iti {
+  width: 100%;
+}
+
+.iti__country-list,
+.iti__country {
+    font-family: "Montserrat Regular", Arial, sans-serif !important;
+    font-size: 0.95rem; 
+}
+
+#phoneNumber {
+  width: 100%;
+  box-sizing: border-box;
+  color: #000;
+  padding-left: 50px !important;
+}
+
+.inputs-container .iti {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+        background: #FFF;
+    }
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: 95%; 
+        box-shadow: none;
+        border: none;
+    }
+    .container-logo {
+        height: 35%;
+        width: 100%;
+        display: flex;
+        padding: 48px 0 0;
+        border-radius: 0 0 32px 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        align-self: stretch;
+    }
+    .container-information {
+        width: 100%;
+    }
+    form{
+        gap: 32px;
+    }
+}

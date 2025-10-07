@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main-container-2 {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;;
+    background: linear-gradient(180deg, #0CBBCD 0%, #0B3C7D 100%);
+}
+
+.container{
+    display: flex;
+    height:auto;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 3rem;
+    gap: 48px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), #FFF;
+    background-blend-mode: luminosity, normal;
+    box-shadow: 0px 10px 50px 0px rgba(0, 61, 130, 0.25);
+}
+
+.text-header{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%; 
+}
+
+.text-header h1{
+    text-align: center;
+    font-family: "Montserrat Alternates";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100%; 
+    letter-spacing: 0.16875rem;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, rgba(0, 190, 208, 0.40) 0%, #003D82 98.17%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    backdrop-filter: blur(15px);
+}
+
+.text-header h5 {
+    color: #003E87;
+    text-align: right;
+    font-family: "Montserrat Regular";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.offers{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3rem;
+    flex: 1; 
+    width: 100%;
+}
+
+.card-offers{
+    display: flex;
+    flex: 1; 
+    gap: 3rem; 
+}
+
+.option-1{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 20rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 4px solid var(--White, #FFF);
+    border: 4px solid var(--White, color(display-p3 1 1 1));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(255, 255, 255, 0.40) 50.48%, rgba(0, 0, 0, 0.40) 100%), url('../img/e66b0efa91bc0d737303730f3bc84154e82a27a9.webp') lightgray 50% / cover no-repeat;
+    background-blend-mode: multiply, normal;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 20px 40px 0px color(display-p3 0 0 0 / 0.10);
+    position: relative;
+}
+
+.option-2{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 20rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 4px solid #FFF;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(255, 255, 255, 0.40) 50.48%, rgba(0, 0, 0, 0.40) 100%), url('../img/5cae21fd560c83c6971dcb543c53600d6c268f9b.webp') lightgray 50% / cover no-repeat;
+     background-blend-mode: multiply, normal;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.10);
+    position: relative;
+}
+
+
+.option-text {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Montserrat Regular";
+    text-align: center;
+    margin-bottom: auto;
+    z-index: 1;
+}
+
+.option-button {
+    color: #FF9B00;
+    margin-top: auto;
+    z-index: 1;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.option-button:hover {
+    background: #FF9B00;
+    color: #ffffffff;
+    transform: scale(1.05);
+}
+
+.btn.btn--secondary.btn--large {
+    margin-top: 2rem;
+    align-self: center;
+}
+
+.text-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    background: #fff;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hidden {
+        display:flex;
+    }
+    .main-container-2 {
+        padding: 1rem; 
+        height: auto !important;
+    }
+    
+    .container {
+        height: auto !important; 
+        width: 100%;
+        max-width: 100%; 
+        padding: 1rem;
+        border-radius: 1rem; 
+        gap: 32px;
+        box-shadow: 0px 5px 25px 0px rgba(0, 61, 130, 0.15);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .text-header h1 {
+        font-size: 40px;
+        letter-spacing: 0.1rem;
+    }
+    
+    .text-header h5 {
+        font-size: 18px;
+        text-align: center; 
+    }
+    
+    .offers {
+        flex-direction: column;
+        gap: 1rem; 
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .card-offers {
+        flex-direction: column;
+        gap: 1rem;
+        height: 100%;
+    }
+    
+    .option-1, .option-2 {
+        min-height: 300px; 
+        padding: 1rem;
+        width: 100%; 
+    }
+    
+    .option-text {
+        font-size: 1rem;
+    }
+    
+    .option-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+    }
+}
+

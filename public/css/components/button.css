@@ -1,0 +1,58 @@
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 0.625rem;
+    border: none;
+    border-radius: 0.75rem;
+    text-align: center;
+    font-family: "Montserrat Regular";
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn--primary{
+    background: #FFF;
+    color: #FF9B00;
+    width: 20.4375rem;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.btn--primary:hover {
+    background: #FF9B00;
+    color: #FFF;
+    transform: translateY(-2px);
+}
+
+.btn--secondary{
+    background: #FF9B00;
+    color: #FFF;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.btn--secondary:hover {
+    background: #00AEFF;
+    color: #FFF;
+    transform: translateY(-2px);
+}
+
+.btn--large {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.btn--medium {
+    width: 20rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

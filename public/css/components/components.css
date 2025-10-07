@@ -1,0 +1,73 @@
+@import url('terms.css');
+@import url('main-container.css');
+@import url('input.css');
+@import url('button.css');
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("../../fonts/Montserrat-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat Alternates";
+    src: url("../../fonts/MontserratAlternates-Black.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.custom-toast {
+    display: none;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: #d32f2f;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: "Montserrat Regular";
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: opacity 0.3s;
+}
+.custom-toast.show {
+    display: block;
+    opacity: 1;
+}
+
+.page-transition-enter {
+  animation: slideInFromRight 1s forwards;
+}
+.page-transition-exit {
+  animation: slideOutToLeft 1s forwards;
+}
+
+@keyframes slideInFromRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideOutToLeft {
+  from { transform: translateX(0); opacity: 1; }
+  to   { transform: translateX(-100%); opacity: 0; }
+}

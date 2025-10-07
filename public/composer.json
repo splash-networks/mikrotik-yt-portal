@@ -1,6 +1,0 @@
-{
-    "require": {
-        "fortawesome/font-awesome": "^5.3",
-        "vlucas/phpdotenv": "^5"
-    }
-}
